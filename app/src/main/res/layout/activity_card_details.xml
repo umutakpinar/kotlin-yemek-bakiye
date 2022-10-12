@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CardDetails"
+    android:background="#90A4AE">
+
+    <TextView
+        android:id="@+id/textViewCardName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="58dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="24dp"
+        android:gravity="center"
+        android:onClick="textViewCardName"
+        android:text="John Doe"
+        android:textColor="@color/white"
+        android:textSize="@android:dimen/app_icon_size"
+        app:layout_constraintBottom_toTopOf="@+id/button3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textViewBalance"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginStart="63dp"
+        android:layout_marginEnd="48dp"
+        android:gravity="center"
+        android:onClick="textViewBalance"
+        android:text="Bakiye : 456tl"
+        android:textColor="@color/white"
+        android:textSize="25sp"
+        app:layout_constraintBottom_toBottomOf="@+id/button3"
+        app:layout_constraintEnd_toStartOf="@+id/button3"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/button3" />
+
+    <Button
+        android:id="@+id/button4"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginStart="92dp"
+        android:layout_marginEnd="75dp"
+        android:layout_marginBottom="105dp"
+        android:hapticFeedbackEnabled="true"
+        android:onClick="decreaseAmount"
+        android:text="- ₺"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/button"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextNumberSigned" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginEnd="84dp"
+        android:hapticFeedbackEnabled="true"
+        android:onClick="increaseAmount"
+        android:text="+ ₺"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="@+id/button4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/button4"
+        app:layout_constraintTop_toTopOf="@+id/button4" />
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginEnd="72dp"
+        android:layout_marginBottom="115dp"
+        android:hapticFeedbackEnabled="true"
+        android:onClick="decreaseFour"
+        android:text="-4₺"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/editTextNumberSigned"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textViewBalance"
+        app:layout_constraintTop_toBottomOf="@+id/textViewCardName" />
+
+    <EditText
+        android:id="@+id/editTextNumberSigned"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp"
+        android:ems="10"
+        android:gravity="center"
+        android:hint="0"
+        android:inputType="numberSigned"
+        android:onClick="editTextAmount"
+        android:text="0"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/button4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button3" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnDeleteCard"
+        android:layout_width="380dp"
+        android:layout_height="54dp"
+        android:layout_marginTop="136dp"
+        android:background="#D4F20000"
+        android:hapticFeedbackEnabled="true"
+        android:onClick="deleteCardClicked"
+        android:text="Delete Card"
+        android:textColor="#000000"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.483"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextNumberSigned"
+        app:layout_constraintVertical_bias="0.0" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
